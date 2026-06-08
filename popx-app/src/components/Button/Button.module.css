@@ -1,0 +1,45 @@
+.btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+  outline: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Purple filled – primary action */
+.primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.primary:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+/* Light purple – secondary action */
+.secondary {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.secondary:hover:not(:disabled) {
+  opacity: 0.85;
+}
