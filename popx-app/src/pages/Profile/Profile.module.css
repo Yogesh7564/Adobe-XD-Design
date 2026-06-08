@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* ── Header bar ── */
+.header {
+  background-color: var(--white);
+  padding: 24px 24px 16px;
+  border-bottom: 1px solid #ebebeb;
+  flex-shrink: 0;
+}
+
+.headerTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* ── Divider between profile card and bio ── */
+.divider {
+  height: 6px;
+  background-color: var(--background);
+  flex-shrink: 0;
+}
+
+/* ── Bio section ── */
+.bioSection {
+  padding: 20px 24px;
+  flex: 1;
+}
+
+.bioText {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* Compact on small phones */
+@media (max-width: 360px) {
+  .header {
+    padding: 20px 20px 14px;
+  }
+
+  .bioSection {
+    padding: 16px 20px;
+  }
+}

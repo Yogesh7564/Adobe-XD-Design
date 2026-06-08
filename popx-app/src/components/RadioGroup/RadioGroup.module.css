@@ -1,0 +1,69 @@
+.fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.legend {
+  font-size: 12px;
+  color: var(--label-active);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.optionsRow {
+  display: flex;
+  gap: 24px;
+}
+
+.optionLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Hide native radio */
+.radioInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Custom radio circle */
+.customRadio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  flex-shrink: 0;
+  transition: border-color 0.15s ease;
+}
+
+.customRadio.checked {
+  border-color: var(--primary);
+}
+
+.customRadio.checked::after {
+  content: '';
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
+
+/* Keyboard focus ring on hidden input → custom visual */
+.radioInput:focus-visible + .customRadio {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.optionText {
+  font-size: 13px;
+  color: var(--text);
+}
