@@ -1,0 +1,65 @@
+.fieldWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.inputGroup {
+  position: relative;
+  border-bottom: 1.5px solid var(--border);
+  padding-top: 18px;
+  transition: border-color 0.2s ease;
+}
+
+.inputGroup.focused {
+  border-bottom-color: var(--primary);
+}
+
+.inputGroup.hasError {
+  border-bottom-color: var(--error);
+}
+
+.label {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  font-size: 14px;
+  color: var(--placeholder);
+  pointer-events: none;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+.labelFloating {
+  top: 2px;
+  font-size: 11px;
+  color: var(--label-active);
+}
+
+.inputGroup.hasError .labelFloating {
+  color: var(--error);
+}
+
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: var(--text);
+  padding: 4px 0 8px 0;
+  caret-color: var(--primary);
+}
+
+.input::placeholder {
+  color: transparent;
+}
+
+.required {
+  color: var(--primary);
+}
+
+.errorMessage {
+  font-size: 11px;
+  color: var(--error);
+  margin-top: 2px;
+}
